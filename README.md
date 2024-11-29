@@ -38,3 +38,38 @@ flowchart TD
     G -->|Not Complete| E
     H --> I[End]
 ```
+
+## Block Diagram
+
+```mermaid
+graph LR
+    Input[Input Unit] --> Control[Control Unit]
+    Control --> Drive[Drive Mechanism]
+    Control --> Sensors[Sensor Feedback]
+    Drive --> Output[Output Unit]
+    Sensors --> Control
+```
+
+## State Diagram 
+
+```mermaid
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> Setup: User Input
+    Setup --> Active: Start Pump
+    Active --> Error: Malfunction Detected
+    Error --> Idle: Reset
+    Active --> Complete: Desired Volume Dispensed
+    Complete --> Idle
+```
+
+### Key Features  
+- **User interface** for parameter input.  
+- **Error detection and handling** to ensure safety.  
+- **Real-time monitoring** during operation.  
+
+### Goals  
+- Ensure accurate fluid dispensing.  
+- Provide a reliable and user-friendly solution.  
+
+---
