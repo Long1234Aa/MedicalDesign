@@ -25,17 +25,38 @@ This project focuses on designing and implementing a **syringe pump**. The syrin
 ---
 
 ## Flow Chart  
-![Flow Chart](docs/flowchart.png)
-
+```mermaid
+flowchart TD
+    A[Start] --> B[Initialize Components]
+    B --> C[User Input Settings]
+    C --> D{Validate Input?}
+    D -->|Yes| E[Pump Operation]
+    D -->|No| F[Notify User & Re-input]
+    E --> G{Completion Check}
+    G -->|Complete| H[Stop]
+    G -->|Not Complete| E
+    H --> I[End]
 ---
 
 ## Block Diagram  
-![Block Diagram](docs/blockdiagram.png)
+graph LR
+    Input[Input Unit] --> Control[Control Unit]
+    Control --> Drive[Drive Mechanism]
+    Control --> Sensors[Sensor Feedback]
+    Drive --> Output[Output Unit]
+    Sensors --> Control
 
 ---
 
 ## State Diagram  
-![State Diagram](docs/statediagram.png)
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> Setup: User Input
+    Setup --> Active: Start Pump
+    Active --> Error: Malfunction Detected
+    Error --> Idle: Reset
+    Active --> Complete: Desired Volume Dispensed
+    Complete --> Idle
 
 ---
 
