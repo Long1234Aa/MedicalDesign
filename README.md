@@ -3,7 +3,7 @@
 ## Introduction  
 This project focuses on designing and implementing a **syringe pump**. The syringe pump is an essential medical device used for accurate and controlled delivery of fluids, medications, or nutrients into a patient's body. Our project aims to create a cost-effective, reliable, and user-friendly syringe pump suitable for various medical and laboratory applications.
 
-**Created by:** Nguyen Phuc Chi Long  
+**Created by:** Nguyen Phuc Chi Long - BEBEIU22243
 
 ---
 
